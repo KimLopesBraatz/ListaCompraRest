@@ -1,0 +1,36 @@
+<form name="editForm" role="form" novalidate>
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="myItemLabel">Cradastrar novo Item</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="control-label" for="field_descricao">Descrição</label>
+            <input type="text" class="form-control" name="descricao" id="field_descricao" ng-model="item.descricao"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_valor">Valor do Item</label>
+            <input type="number" class="form-control" name="valor" id="field_valor" ng-model="item.valor"/>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancel()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="button" class="btn btn-primary" ng-click="save(item)">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
+<div class="jumbotron">
+    <table class="table table-striped">
+        <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+        </tr>
+        <tr ng-repeat="item in itens">
+            <td>{{item.descricao}}</td>
+            <td>{{item.valor | currency:'R$'}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,60 @@
+<h4 class="modal-title" id="myListaLabel">Cradastrar nova Lista</h4>
+<div>
+	<div class="form-group">
+        <label class="control-label" for="field_descricao">Descrição da Lista</label>
+        <input type="text" class="form-control" name="nome" id="field_descricao" ng-model="lista.descricao"/>
+    </div>
+    <fieldset  data-ng-repeat="produto in produtos">
+        <form name="editForm" role="form" novalidate>
+            <div id="contactForm">
+                <!-- Header -->
+                <button class="btn btn-primary pull-left" ng-model="radioModel" uib-btn-radio="'Item'">
+        			<span class="glyphicon glyphicon-plus" ng-click="addContactForm()"> Item</span>
+    			</button>
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true" ng-click="removeProdutoForm(this)">&times;</button>
+                </div>
+                <!-- Body -->
+                <div class="modal-body">
+                    <!-- Descrição -->
+                    <div class="form-group">
+                        <label class="control-label" for="field_descricao">Descrição do Item</label>
+                        <input type="text" class="form-control" name="descricao" id="field_descricao" ng-model="produto.descricao"/>
+                    </div>
+                    <!-- Valor -->
+                    <div class="form-group">
+                        <label class="control-label" for="field_valor">Valor</label>
+                        <input type="number" class="form-control" name="valor" id="field_valor" ng-model="produto.valor" ng-change="getProdutosFromForm()"/>
+                    </div>
+                    <!-- Quantidade -->
+                    <div class="form-group">
+			            <label class="control-label" for="field_qtd">Quantidade</label>
+			            <input type="number" class="form-control" name="qtd" id="field_qtd" ng-model="produto.qtd" min="1" ng-change="init()"/>
+
+        			</div>
+                    <!-- SubTotal -->
+                    <div class="form-group">
+                        <label class="control-label" for="field_subtotal">Subtotal</label>
+                        <input type="number" class="form-control" name="subtotal" id="field_subtotal" ng-model="produto.subtotal" disabled/>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</div>
+<form name="editForm" role="form" novalidate>
+    <div class="modal-body">
+        <div class="form-group">
+            <label class="control-label" for="field_total">Total</label>
+            <p class="listaResult">{{lista.total | currency:'R$'}}</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" class="btn btn-primary" ng-click="save(lista)">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+.navbar { 
+	border-radius:0;
+}
+
+.listaResult {
+    background-color: #eee;
+    border:  1px solid #ccc;
+    border-radius: 4px;
+    height: 40px;
+    padding: 1%;
+    margin-top: 3%;
+}

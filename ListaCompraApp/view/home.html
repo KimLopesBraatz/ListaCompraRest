@@ -1,0 +1,26 @@
+<div class="jumbotron">
+	<h2>Listas Cadastradas</h2>
+	<table class="table table-striped">
+			<tr>
+				<th>Código</th>
+				<th>Descrição</th>
+				<th>Total</th>
+			</tr>
+			<tr ng-repeat="lista in listas">
+				<td>{{lista.id}}</td>
+				<td>{{lista.descricao}}</td>
+				<td>{{lista.total | currency:'R$'}}</td>
+			</tr>
+	</table>
+	<h2>Itens Cadastrados</h2>
+	<table class="table table-striped">
+			<tr>
+				<th>Descrição</th>
+				<th>Preço</th>
+			</tr>
+			<tr ng-repeat="item in itens">
+				<td>{{item.descricao}}</td>
+				<td>{{item.valor | currency:'R$'}}</td>
+			</tr>
+	</table>
+</div>

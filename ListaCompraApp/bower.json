@@ -1,0 +1,24 @@
+{
+  "name": "portalproject",
+  "authors": [
+    "Wanzeller Kim Lopes Braatz <wanzeller.scabbia@gmail.com>"
+  ],
+  "description": "Portal Web where companies that can buy plans. On that plan is possible to show and sell them properties like a virtual tour.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6",
+    "angular-resource": "1.5.8",
+    "angular-ui-router": "0.3.0"
+  }
+}
