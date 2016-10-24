@@ -5,7 +5,7 @@ Simple Application Rest using Spring Boot and AngularJS
 
 ListaCompraRest uses a number of open source projects to work properly:
 
-* [Spring Boot] - Spring Boot favors convention over configuration and is designed to get you up and running as quickly as possible.
+* [Spring] - Spring Boot favors convention over configuration and is designed to get you up and running as quickly as possible.
 * [AngularJS] - HTML enhanced for web apps!
 * [Bootstrap] - great UI boilerplate for modern web apps
 
@@ -24,7 +24,8 @@ $ npm install -g http-server
 
 ```sh
 $ git clone [git-repo-url] ListaCompraRest 
-$ cd ListaCompraRest 
+$ cd ListaCompraRest
+$ cd ListaCompraApp
 $ bower install
 $ htt-server
 $ and enjoy
@@ -41,6 +42,7 @@ $ and enjoy
    [AngularJS]: <http://angularjs.org>
    [Bower]: <http://bower.io/>
    [Node]: <https://nodejs.org/>
+   [Spring]: <https://spring.io/>
    
    [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
    [PlGh]:  <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
